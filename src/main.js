@@ -83,13 +83,37 @@ function renderOverview() {
 }
 
 function habitMeta(category, index) {
-  const times = {
-    health: [['AM', 'measure'], ['daily', 'stable inputs']],
-    longevity: [['weekly', 'review'], ['ongoing', 'claims check']],
-    nutrition: [['meal prep', 'repeatable'], ['source', 'verify']],
-    sleep: [['PM', 'bedtime'], ['before late night', 'front-load']],
+  const slots = {
+    health: [
+      ['morning', '3–6 mo labs'],
+      ['evening', 'nightly'],
+      ['all day', 'daily'],
+      ['all day', 'each meal'],
+      ['morning/evening', 'daily'],
+    ],
+    longevity: [
+      ['all day', 'daily'],
+      ['all day', '6 hr/wk'],
+      ['morning', 'weekly review'],
+      ['morning', 'routine checks'],
+      ['all day', 'daily'],
+    ],
+    nutrition: [
+      ['all day', 'each meal'],
+      ['all day', 'daily target'],
+      ['evening', '4 hr pre-bed'],
+      ['morning', 'review data'],
+      ['all day', 'cycle-aware'],
+    ],
+    sleep: [
+      ['evening', 'nightly'],
+      ['evening', '4 hr pre-bed'],
+      ['evening', '60 min'],
+      ['evening', 'nightly'],
+      ['morning', '15–30 min'],
+    ],
   };
-  return (times[category] || [['daily', 'routine']])[index] || ['daily', 'source-aware'];
+  return (slots[category] || [['all day', 'daily']])[index] || ['all day', 'source-aware'];
 }
 
 function habitTitle(text) {
@@ -103,7 +127,7 @@ function renderProtocol(p) {
       <div class="head-row"><h1>${esc(p.title)}</h1><span class="meta">confidence ${esc(p.confidence)} · habits/objectives/forbidden separated</span></div>
       <p class="lead">${esc(p.lede)} <em>Medical caution:</em> this summarizes public Bryan Johnson/Blueprint claims and source trails, not personal advice.</p>
       <div class="habit-list" id="${p.category}-habits-wrap">
-        <div class="habit-head"><span>idx</span><span>time</span><span>habit</span></div>
+        <div class="habit-head"><span>idx</span><span>when</span><span>habit</span></div>
         ${p.sections.habits.map((h, i) => {
           const [time, dose] = habitMeta(p.category, i);
           return `<div class="habit">

@@ -19,7 +19,9 @@ const forbiddenIndex = main.indexOf('<h3>Forbidden</h3>');
 assert.ok(habitListIndex !== -1, 'protocol pages must render a dedicated habit-list');
 assert.ok(longtermIndex > habitListIndex, 'Long-term objectives must render after habit-list');
 assert.ok(forbiddenIndex > longtermIndex, 'Forbidden panel must render separately after Long-term objectives');
-assert.match(main, /<div class="habit-head"><span>idx<\/span><span>time<\/span><span>habit<\/span><\/div>/, 'habit list must use idx | time | habit header');
+assert.match(main, /<div class="habit-head"><span>idx<\/span><span>when<\/span><span>habit<\/span><\/div>/, 'habit list must use idx | when | habit header');
+assert.match(main, /\['morning', '3–6 mo labs'\]/, 'habit timing must show when label with duration below it');
+assert.doesNotMatch(main, /\['AM', 'measure'\]/, 'habit timing must not use abbreviated AM/measure placeholder');
 assert.match(css, /\.dont::before\s*\{[^}]*content:\s*['"]FORBID['"]/s, 'Forbidden rows must use FORBID badge');
 assert.doesNotMatch(main + data, /bucket table|bucket-table|combined/i, 'must not include a combined bucket table');
 
