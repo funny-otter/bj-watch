@@ -85,7 +85,7 @@ function renderOverview() {
 function habitMeta(category, index) {
   const slots = {
     health: [
-      ['morning', '3–6 mo labs'],
+      ['morning', 'daily check'],
       ['evening', 'nightly'],
       ['all day', 'daily'],
       ['all day', 'each meal'],
@@ -93,17 +93,17 @@ function habitMeta(category, index) {
     ],
     longevity: [
       ['all day', 'daily'],
-      ['all day', '6 hr/wk'],
-      ['morning', 'weekly review'],
-      ['morning', 'routine checks'],
+      ['all day', 'daily block'],
+      ['morning', 'daily review'],
+      ['all day', 'daily'],
       ['all day', 'daily'],
     ],
     nutrition: [
       ['all day', 'each meal'],
       ['all day', 'daily target'],
       ['evening', '4 hr pre-bed'],
-      ['morning', 'review data'],
-      ['all day', 'cycle-aware'],
+      ['all day', 'daily'],
+      ['all day', 'daily log'],
     ],
     sleep: [
       ['evening', 'nightly'],

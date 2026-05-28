@@ -20,8 +20,9 @@ assert.ok(habitListIndex !== -1, 'protocol pages must render a dedicated habit-l
 assert.ok(longtermIndex > habitListIndex, 'Long-term objectives must render after habit-list');
 assert.ok(forbiddenIndex > longtermIndex, 'Forbidden panel must render separately after Long-term objectives');
 assert.match(main, /<div class="habit-head"><span>idx<\/span><span>when<\/span><span>habit<\/span><\/div>/, 'habit list must use idx | when | habit header');
-assert.match(main, /\['morning', '3–6 mo labs'\]/, 'habit timing must show when label with duration below it');
+assert.match(main, /\['morning', 'daily check'\]/, 'habit timing must show daily when label with duration below it');
 assert.doesNotMatch(main, /\['AM', 'measure'\]/, 'habit timing must not use abbreviated AM/measure placeholder');
+assert.doesNotMatch(main, /\['morning', '3–6 mo labs'\]/, 'periodic lab cadence belongs in long-term objectives, not daily habits');
 assert.match(css, /\.dont::before\s*\{[^}]*content:\s*['"]FORBID['"]/s, 'Forbidden rows must use FORBID badge');
 assert.doesNotMatch(main + data, /bucket table|bucket-table|combined/i, 'must not include a combined bucket table');
 

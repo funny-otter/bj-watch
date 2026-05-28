@@ -7,18 +7,18 @@ export const protocolCategories = [
     sourcePaths: ['concepts/blueprint-protocol.md', 'entities/project-blueprint.md', 'concepts/algorithmic-health.md'],
     sections: {
       habits: [
-        'Measure first, then adjust: bloodwork every 3–6 months plus wearable, oral, skin, organ, glucose, body-composition, and annual screening signals where appropriate.',
-        'Make sleep the root health behavior: lower resting heart rate before bed, protect a consistent bedtime, and treat sleep as the foundation for exercise, nutrition, and self-control.',
-        'Train the body every day in some form: strength, cardio, flexibility, balance, post-meal movement, and desk-break movement instead of occasional heroic workouts.',
-        'Use food systems, not mood: make every calorie “fight for its life,” rely on repeatable meals, and avoid letting hunger/stress make eating decisions.',
-        'Maintain the daily hygiene layer: oral care morning/night, skin protection, clean water, morning light, and relationship/community inputs.',
+        'Start with a morning check-in: review sleep, resting heart rate, readiness, weight/glucose if used, and choose the day’s intensity from those signals.',
+        'Protect the evening sleep routine every day: consistent bedtime, calm wind-down, lower resting heart rate, and no negotiation with late-night impulses.',
+        'Move daily: strength, cardio, flexibility, balance, post-meal walks, or desk-break movement instead of saving activity for occasional heroic workouts.',
+        'Eat from a prepared food system: make every calorie “fight for its life” and avoid hunger, stress, or convenience making the decision.',
+        'Keep the hygiene layer daily: oral care morning/night, skin protection, clean water, morning light, and relationship/community contact.',
       ],
       longterm: [
+        'Measurement cadence: use bloodwork every 3–6 months plus wearable, oral, skin, organ, glucose, body-composition, and annual screening signals where appropriate.',
         'Feedback loop: keep Blueprint as a repeatable measure → intervene → retest system whose rules change when biomarkers, symptoms, or evidence change.',
         'Cardiometabolic resilience: lower bedtime resting heart rate and stabilize sleep, glucose, blood pressure, and body composition over repeated measurements.',
         'Organ-age posture: track skin, oral, vascular, metabolic, muscle, bone, sleep, and fertility/sexual-function claims as measured targets, not vibes.',
         'Durable function: preserve muscle, bone density, mobility, balance, and injury resistance so the protocol compounds instead of causing setbacks.',
-        'Medical-caution integrity: keep the public page source-aware and separate personal routine documentation from personal treatment advice.',
       ],
       donts: [
         'Do not present Johnson’s N=1 biomarker movement as proof of clinical outcomes for readers.',
@@ -38,16 +38,16 @@ export const protocolCategories = [
     sections: {
       habits: [
         'Protect the foundation daily: sleep quality, exercise, nutrition, emotional resilience, and social connection before exotic therapies.',
-        'Exercise toward the published baseline: about 6 hours weekly across strength, cardio, flexibility, balance, Zone 2, and vigorous work when appropriate.',
-        'Track biological-age, speed-of-aging, blood, imaging, sleep, fitness, oral, skin, and body-composition numbers as claims with source trails and critique links nearby.',
-        'Use clinician-guided prevention and routine measurement: bloodwork, glucose monitoring where relevant, annual checks, dentist, eye doctor, and cancer/skin screening.',
-        'Keep family, friendship, and community in the protocol because Johnson explicitly lists “love and be loved” as a longevity behavior.',
+        'Do a daily training block or recovery block: strength, Zone 2/cardio, flexibility, balance, or mobility depending on readiness.',
+        'Run a morning longevity dashboard: review sleep, activity, recovery, and body-composition trend signals without overclaiming what they prove.',
+        'Practice emotional regulation every day: reduce stress, avoid revenge-bedtime impulses, and keep the protocol calm enough to repeat.',
+        'Make love and connection a daily input: family, friendship, community, or helpful contact, not just biomarkers and interventions.',
       ],
       longterm: [
+        'Training baseline: build toward the published exercise volume over weeks—about 6 hours weekly across strength, cardio, flexibility, balance, Zone 2, and vigorous work when appropriate.',
+        'Prevention cadence: keep clinician-guided bloodwork, glucose monitoring where relevant, annual checks, dentist, eye doctor, and cancer/skin screening in the system.',
         'Muscle/fat/bone targets: preserve high lean mass, optimal body fat, and bone density rather than chasing scale weight alone.',
-        'Cardiovascular/vascular targets: sustain low resting heart rate, healthy blood pressure, and vascular-function claims in the late-teen/early-20s framing only as reported metrics.',
-        'Metabolic targets: keep glucose and blood-sugar-control claims in measurement context, with retesting instead of diet ideology.',
-        'Aging-speed targets: display epigenetic speed-of-aging, telomere, and “organ age” claims as tracked biomarkers, not guaranteed lifespan outcomes.',
+        'Aging-speed targets: display biological-age, epigenetic speed-of-aging, telomere, and “organ age” claims as tracked biomarkers, not guaranteed lifespan outcomes.',
         'Evidence-tier target: separate durable healthspan practices from frontier enhancement, drug-stack, gene-therapy, and immortality narratives.',
       ],
       donts: [
@@ -67,18 +67,18 @@ export const protocolCategories = [
     sourcePaths: ['entities/project-blueprint.md', 'concepts/blueprint-protocol.md'],
     sections: {
       habits: [
-        'Make every calorie “fight for its life”: choose nutrient-dense foods and use repeatable meal systems rather than mood-driven eating.',
-        'Keep the current published macro frame source-bound: 2,250 calories, about 130 g protein, 206 g carbs, and 101 g fat for Johnson’s routine, not a universal prescription.',
+        'Eat repeatable, nutrient-dense meals: make every calorie “fight for its life” instead of letting mood or convenience pick the menu.',
+        'Hit the day’s planned protein, fiber, healthy-fat, and micronutrient pattern from whole-food meals or clearly sourced Blueprint inputs.',
         'Finish the final meal/snack at least four hours before bed so digestion and resting heart rate do not wreck sleep.',
-        'Use biomarkers to decide whether foods serve the body rather than identifying with camps such as plant-based, carnivore, keto, or paleo.',
-        'For female-cycle guidance, keep phase-aware nutrition in context: higher-carb follicular support, luteal protein/healthy-fat emphasis, hydration/electrolytes, and clinician-aware supplementation.',
+        'Hydrate and handle electrolytes deliberately each day, especially around training, heat, sauna, travel, or cycle-related needs.',
+        'Log food response signals daily where useful: hunger, glucose if used, digestion, sleep impact, and whether the meal system was followed.',
       ],
       longterm: [
-        'Calorie target: keep moderate restriction and exact calorie numbers tied to Johnson’s sourced routine, with no reader-specific prescription.',
+        'Calorie target: keep Johnson’s current published macro frame source-bound—2,250 calories, about 130 g protein, 206 g carbs, and 101 g fat—not a universal prescription.',
         'Protein target: preserve muscle with adequate protein, including female-cycle and menopause notes where the source gives separate targets.',
-        'Metabolic target: support glucose stability and bedtime RHR by avoiding large late meals and retesting relevant biomarkers.',
+        'Metabolic target: use biomarkers to decide whether foods serve the body rather than identifying with plant-based, carnivore, keto, paleo, or other camps.',
         'Nutrient-density target: prioritize longevity-food patterns, fiber, healthy fats, micronutrient adequacy, and tested deficiencies over diet identity.',
-        'Product-claim target: pair Blueprint foods, supplements, microplastics testing, and metabolic-drug commentary with source paths and independent-evidence caveats.',
+        'Product-claim target: pair Blueprint foods, supplements, microplastics testing, metabolic-drug commentary, and cycle-aware guidance with source paths and independent-evidence caveats.',
       ],
       donts: [
         'Do not publish Johnson’s calorie, macro, supplement-dose, or eating-window numbers as universal targets.',
@@ -97,16 +97,16 @@ export const protocolCategories = [
     sourcePaths: ['concepts/blueprint-protocol.md', 'raw/articles/bryan-johnson/x-twitter-daily-2026-05-25.md'],
     sections: {
       habits: [
-        'Reframe identity: act like a professional sleeper and put sleep as the first appointment the rest of the day works around.',
+        'Treat sleep as tonight’s first appointment: plan the day around a protected bedtime instead of negotiating at night.',
         'Eat the final meal at least four hours before bed to lower bedtime resting heart rate and protect sleep quality.',
         'Turn screens off 60 minutes before bed and use a wind-down routine: reading, walk, journaling, breathwork, meditation, bath, family, or a friend call.',
-        'Keep a consistent bedtime and regulate evening light with red/amber light, blue-light reduction, and a quiet, dark, cool bedroom around 65–70°F.',
-        'Get morning light within 15–30 minutes of waking and gather data with a journal, wearable, or tracker to tune the routine.',
+        'Set the bedroom every night: red/amber light or low blue light, quiet, dark, cool, and around 65–70°F when practical.',
+        'Get morning light within 15–30 minutes of waking and capture a simple sleep note or wearable signal to tune tonight.',
       ],
       longterm: [
+        'Identity target: become a “professional sleeper” by making the routine stable enough to survive travel, work, and social pressure.',
         'RHR target: lower resting heart rate before bed because Johnson frames it as the single highest-leverage sleep-health behavior.',
         'Consistency target: preserve a stable sleep/wake schedule rather than using occasional recovery nights as the strategy.',
-        'Environment target: keep the room quiet, dark, cool, and low-stimulation so the body can wind down predictably.',
         'Measurement target: track sleep habits, patterns, and wearable claims as feedback, not as context-free universal score targets.',
         'Recovery-system target: treat sleep as the foundation that makes exercise, nutrition, emotional resilience, and self-control easier.',
       ],
