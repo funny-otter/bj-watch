@@ -7,11 +7,11 @@ export const protocolCategories = [
     sourcePaths: ['concepts/blueprint-protocol.md', 'entities/project-blueprint.md', 'concepts/algorithmic-health.md'],
     sections: {
       habits: [
-        'Start with a morning check-in: review sleep, resting heart rate, readiness, weight/glucose if used, and choose the day’s intensity from those signals.',
-        'Protect the evening sleep routine every day: consistent bedtime, calm wind-down, lower resting heart rate, and no negotiation with late-night impulses.',
-        'Move daily: strength, cardio, flexibility, balance, post-meal walks, or desk-break movement instead of saving activity for occasional heroic workouts.',
-        'Eat from a prepared food system: make every calorie “fight for its life” and avoid hunger, stress, or convenience making the decision.',
-        'Keep the hygiene layer daily: oral care morning/night, skin protection, clean water, morning light, and relationship/community contact.',
+        { title: 'Morning light', when: 'morning', duration: '6–10 min', description: 'Get bright light in the eyes soon after waking; Johnson’s 2026 routine uses a 10,000-lux light for 6 minutes when he wakes before sunrise.', why: 'Anchors circadian timing and supports the sleep-first loop Johnson frames as foundational.' },
+        { title: 'Oral hygiene', when: 'morning', duration: 'daily', description: 'Water pik, floss, brush, and tongue scraper first thing in the morning, matching the published Blueprint morning routine.', why: 'Keeps oral care as a concrete daily health input instead of a vague wellness category.' },
+        { title: 'Exercise block', when: 'morning', duration: '60–90 min', description: 'Do the daily movement block: cardio, strength, balance, stretching, and periodic high-intensity work as appropriate.', why: 'Johnson’s routine lists a 90-minute mixed workout; Blueprint’s exercise guidance says to make exercise habitual every day.' },
+        { title: 'Sauna / heat', when: 'morning', duration: '20 min', description: 'Use sauna as a sourced Blueprint routine item when appropriate; Johnson’s 2026 morning routine lists 20 minutes daily.', why: 'A protocol input from Johnson’s own routine, but still shown as a personal routine item rather than universal medical advice.' },
+        { title: 'Red / NIR light', when: 'morning', duration: '6 min', description: 'Use red/near-infrared light therapy as Johnson reports in his morning routine, with panels surrounding him for 6 minutes.', why: 'Keeps the reference-style concrete habit row while preserving source-aware caution around intervention claims.' },
       ],
       longterm: [
         'Measurement cadence: use bloodwork every 3–6 months plus wearable, oral, skin, organ, glucose, body-composition, and annual screening signals where appropriate.',
@@ -37,11 +37,11 @@ export const protocolCategories = [
     sourcePaths: ['concepts/immortality-by-2039.md', 'concepts/biomarker-driven-longevity-protocols.md'],
     sections: {
       habits: [
-        'Protect the foundation daily: sleep quality, exercise, nutrition, emotional resilience, and social connection before exotic therapies.',
-        'Do a daily training block or recovery block: strength, Zone 2/cardio, flexibility, balance, or mobility depending on readiness.',
-        'Run a morning longevity dashboard: review sleep, activity, recovery, and body-composition trend signals without overclaiming what they prove.',
-        'Practice emotional regulation every day: reduce stress, avoid revenge-bedtime impulses, and keep the protocol calm enough to repeat.',
-        'Make love and connection a daily input: family, friendship, community, or helpful contact, not just biomarkers and interventions.',
+        { title: 'Biomarker log', when: 'morning', duration: '5–15 min', description: 'Review sleep, resting heart rate, activity, body composition, glucose if used, and other tracked signals before changing the day’s plan.', why: 'Blueprint is a measurement loop; this keeps measurement as a daily dashboard without claiming biomarkers prove lifespan outcomes.' },
+        { title: 'Daily movement floor', when: 'all day', duration: 'daily', description: 'Do some movement every day and add 5–10 minute walks after meals or desk breaks every 30 minutes when possible.', why: 'Blueprint exercise guidance explicitly says to create an exercise habit and move throughout the day.' },
+        { title: 'Strength / mobility work', when: 'variable', duration: '45–60 min', description: 'Rotate strength, flexibility, balance, mobility, Zone 2, or HIIT according to the week’s plan and recovery.', why: 'Preserves the reference’s strength/cardio split while avoiding a false every-day heavy-lifting prescription.' },
+        { title: 'Breathwork / meditation', when: 'morning', duration: '6 min', description: 'Use a short breathing exercise or meditation to get mind and body ready for the day.', why: 'Johnson’s 2026 morning routine includes 6 minutes of breath work or meditation as a daily setup habit.' },
+        { title: 'Connection input', when: 'all day', duration: 'daily', description: 'Include family, friendship, community, or helpful contact as part of the protocol instead of only optimizing numbers.', why: 'Johnson’s longevity framing includes love and being loved; this keeps it as a daily behavior, not a lab target.' },
       ],
       longterm: [
         'Training baseline: build toward the published exercise volume over weeks—about 6 hours weekly across strength, cardio, flexibility, balance, Zone 2, and vigorous work when appropriate.',
@@ -67,11 +67,11 @@ export const protocolCategories = [
     sourcePaths: ['entities/project-blueprint.md', 'concepts/blueprint-protocol.md'],
     sections: {
       habits: [
-        'Eat repeatable, nutrient-dense meals: make every calorie “fight for its life” instead of letting mood or convenience pick the menu.',
-        'Hit the day’s planned protein, fiber, healthy-fat, and micronutrient pattern from whole-food meals or clearly sourced Blueprint inputs.',
-        'Finish the final meal/snack at least four hours before bed so digestion and resting heart rate do not wreck sleep.',
-        'Hydrate and handle electrolytes deliberately each day, especially around training, heat, sauna, travel, or cycle-related needs.',
-        'Log food response signals daily where useful: hunger, glucose if used, digestion, sleep impact, and whether the meal system was followed.',
+        { title: 'Pre-workout nutrition', when: 'morning', duration: '8 oz + meal', description: 'Use the sourced morning nutrition block: Longevity Mix-style drink, protein, berries/nuts, EVOO, and documented supplement inputs where verified.', why: 'Johnson’s morning routine gives concrete nutrition inputs; this keeps them source-bound, not reader prescriptions.' },
+        { title: 'Blueprint breakfast', when: 'morning', duration: 'daily meal', description: 'Eat the repeatable plant-led breakfast pattern: vegetables, legumes, extra virgin olive oil, berries, nuts, seeds, and decaf coffee where appropriate.', why: 'The routine emphasizes repeatable nutrient-dense meals rather than mood-driven eating.' },
+        { title: 'Final food cutoff', when: 'evening', duration: '4 hr pre-bed', description: 'Finish the final meal/snack at least four hours before bed when following Johnson’s RHR-before-sleep guidance.', why: 'Johnson repeatedly ties late food to higher bedtime resting heart rate and worse sleep quality.' },
+        { title: 'Hydration / minerals', when: 'all day', duration: 'daily', description: 'Distribute water and mineral/electrolyte attention through the day, especially around training, sauna, heat, or travel.', why: 'Keeps the reference hydration row as a practical daily input while avoiding unsupported exact universal dosing.' },
+        { title: 'Food response log', when: 'all day', duration: 'daily log', description: 'Record hunger, digestion, glucose if used, and sleep impact so meals are judged by response rather than diet identity.', why: 'Matches Blueprint’s measurement-first nutrition posture without turning Johnson’s personal macros into medical advice.' },
       ],
       longterm: [
         'Calorie target: keep Johnson’s current published macro frame source-bound—2,250 calories, about 130 g protein, 206 g carbs, and 101 g fat—not a universal prescription.',
@@ -97,11 +97,11 @@ export const protocolCategories = [
     sourcePaths: ['concepts/blueprint-protocol.md', 'raw/articles/bryan-johnson/x-twitter-daily-2026-05-25.md'],
     sections: {
       habits: [
-        'Treat sleep as tonight’s first appointment: plan the day around a protected bedtime instead of negotiating at night.',
-        'Eat the final meal at least four hours before bed to lower bedtime resting heart rate and protect sleep quality.',
-        'Turn screens off 60 minutes before bed and use a wind-down routine: reading, walk, journaling, breathwork, meditation, bath, family, or a friend call.',
-        'Set the bedroom every night: red/amber light or low blue light, quiet, dark, cool, and around 65–70°F when practical.',
-        'Get morning light within 15–30 minutes of waking and capture a simple sleep note or wearable signal to tune tonight.',
+        { title: 'Protected bedtime', when: 'evening', duration: 'nightly', description: 'Plan around a consistent bedtime; Johnson’s 2026 routine says every day starts the night before and he is in bed by 8:30 pm.', why: 'Sleep is framed as his top life priority and the base layer that makes exercise, nutrition, and self-control easier.' },
+        { title: 'Final food early', when: 'evening', duration: '4 hr pre-bed', description: 'Stop food early enough to lower bedtime resting heart rate; Johnson’s protocol highlights four hours before bed.', why: 'Lower bedtime RHR is one of his highest-leverage sleep-health claims.' },
+        { title: 'Screens-off wind-down', when: 'evening', duration: '60 min', description: 'Turn screens off and use a wind-down routine such as reading, bath, meditation, journaling, family time, or breathwork.', why: 'The sleep-habits page recommends a 60-minute wind-down and screen cutoff.' },
+        { title: 'Cool dark room', when: 'evening', duration: 'nightly', description: 'Regulate evening light and make the bedroom quiet, dark, cool, and low-stimulation.', why: 'Johnson’s sleep guidance emphasizes light, temperature, and peaceful environment as practical sleep levers.' },
+        { title: 'Morning light + sleep note', when: 'morning', duration: '15–30 min', description: 'Get light soon after waking and track sleep habits or wearable signals to tune the next night.', why: 'His sleep guidance pairs morning light with data gathering so the routine can be adjusted.' },
       ],
       longterm: [
         'Identity target: become a “professional sleeper” by making the routine stable enough to survive travel, work, and social pressure.',

@@ -24,7 +24,7 @@ const navGroups = [
   { label: '// feed', items: [{ tab: 'overview', prefix: '$', label: 'overview', badge: curatedSignals.length }] },
   {
     label: '// protocols',
-    items: protocolCategories.map((p) => ({ tab: p.category, prefix: '~/', label: p.category, badge: p.sections.habits.length + p.sections.longterm.length + p.sections.donts.length })),
+    items: protocolCategories.map((p) => ({ tab: p.category, prefix: '~/', label: p.category, badge: p.sections.habits.length })),
   },
   { label: '// reference', items: [{ tab: 'concepts', prefix: '~/', label: 'concepts', badge: conceptEntries.length }] },
   { label: '// signal', items: [{ tab: 'metrics', prefix: '$', label: 'metrics', badge: curatedActivity.length }, { tab: 'changelog', prefix: '$', label: 'changelog', badge: protocolUpdates.length + siteChanges.length }] },
@@ -82,43 +82,17 @@ function renderOverview() {
     </section>`;
 }
 
-function habitMeta(category, index) {
-  const slots = {
-    health: [
-      ['morning', 'daily check'],
-      ['evening', 'nightly'],
-      ['all day', 'daily'],
-      ['all day', 'each meal'],
-      ['morning/evening', 'daily'],
-    ],
-    longevity: [
-      ['all day', 'daily'],
-      ['all day', 'daily block'],
-      ['morning', 'daily review'],
-      ['all day', 'daily'],
-      ['all day', 'daily'],
-    ],
-    nutrition: [
-      ['all day', 'each meal'],
-      ['all day', 'daily target'],
-      ['evening', '4 hr pre-bed'],
-      ['all day', 'daily'],
-      ['all day', 'daily log'],
-    ],
-    sleep: [
-      ['evening', 'nightly'],
-      ['evening', '4 hr pre-bed'],
-      ['evening', '60 min'],
-      ['evening', 'nightly'],
-      ['morning', '15–30 min'],
-    ],
-  };
-  return (slots[category] || [['all day', 'daily']])[index] || ['all day', 'source-aware'];
-}
-
-function habitTitle(text) {
+function habitFields(h) {
+  if (h && typeof h === 'object') return h;
+  const text = String(h ?? '');
   const [first] = text.split(':');
-  return first.length < 76 ? first : text.slice(0, 70) + '…';
+  return {
+    title: first.length < 76 ? first : text.slice(0, 70) + '…',
+    description: text,
+    why: 'Source-aware routine item; verify exact targets before treating as personal guidance.',
+    when: 'all day',
+    duration: 'daily',
+  };
 }
 
 function renderProtocol(p) {
@@ -127,13 +101,13 @@ function renderProtocol(p) {
       <div class="head-row"><h1>${esc(p.title)}</h1><span class="meta">confidence ${esc(p.confidence)} · habits/objectives/forbidden separated</span></div>
       <p class="lead">${esc(p.lede)} <em>Medical caution:</em> this summarizes public Bryan Johnson/Blueprint claims and source trails, not personal advice.</p>
       <div class="habit-list" id="${p.category}-habits-wrap">
-        <div class="habit-head"><span>idx</span><span>when</span><span>habit</span></div>
+        <div class="habit-head"><span>idx</span><span>time</span><span>habit</span></div>
         ${p.sections.habits.map((h, i) => {
-          const [time, dose] = habitMeta(p.category, i);
+          const habit = habitFields(h);
           return `<div class="habit">
             <span class="id">[${String(i + 1).padStart(2, '0')}]</span>
-            <span class="h-time">${esc(time)}<br><span class="h-dose-inline">${esc(dose)}</span></span>
-            <span><b class="h-title">${esc(habitTitle(h))}</b><span class="h-desc">${esc(h)}</span><span class="h-why">Kept source-aware and confidence-bounded; exact dose targets are omitted unless verified.</span></span>
+            <span class="h-time">${esc(habit.when)}<br><span class="h-dose-inline">${esc(habit.duration)}</span></span>
+            <span><b class="h-title">${esc(habit.title)}</b><span class="h-desc">${esc(habit.description)}</span><span class="h-why">${esc(habit.why)}</span></span>
           </div>`;
         }).join('')}
       </div>

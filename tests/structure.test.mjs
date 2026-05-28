@@ -19,10 +19,12 @@ const forbiddenIndex = main.indexOf('<h3>Forbidden</h3>');
 assert.ok(habitListIndex !== -1, 'protocol pages must render a dedicated habit-list');
 assert.ok(longtermIndex > habitListIndex, 'Long-term objectives must render after habit-list');
 assert.ok(forbiddenIndex > longtermIndex, 'Forbidden panel must render separately after Long-term objectives');
-assert.match(main, /<div class="habit-head"><span>idx<\/span><span>when<\/span><span>habit<\/span><\/div>/, 'habit list must use idx | when | habit header');
-assert.match(main, /\['morning', 'daily check'\]/, 'habit timing must show daily when label with duration below it');
+assert.match(main, /<div class="habit-head"><span>idx<\/span><span>time<\/span><span>habit<\/span><\/div>/, 'habit list must use reference idx | time | habit header');
+assert.match(main, /habitFields\(h\)/, 'habits must render from structured habit objects, not string-derived titles');
+assert.match(data, /title: 'Morning light'[^}]*when: 'morning'[^}]*duration: '6–10 min'/s, 'health habits must include structured reference-like timing/duration');
+assert.match(data, /why: 'Anchors circadian timing/, 'habit rows must have specific why text');
 assert.doesNotMatch(main, /\['AM', 'measure'\]/, 'habit timing must not use abbreviated AM/measure placeholder');
-assert.doesNotMatch(main, /\['morning', '3–6 mo labs'\]/, 'periodic lab cadence belongs in long-term objectives, not daily habits');
+assert.doesNotMatch(main + data, /3–6 mo labs/, 'periodic lab cadence belongs in long-term objectives, not daily habit timing');
 assert.match(css, /\.dont::before\s*\{[^}]*content:\s*['"]FORBID['"]/s, 'Forbidden rows must use FORBID badge');
 assert.doesNotMatch(main + data, /bucket table|bucket-table|combined/i, 'must not include a combined bucket table');
 
